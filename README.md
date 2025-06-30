@@ -36,6 +36,7 @@ Outputs a JSON sentiment report in `output/daily_report.json`
 Create a `.env` file with your API key:
 ```
 api_key=YOUR_API_KEY_HERE
+Get your API key here https://twitterapi.io/dashboard
 ```
 
 ## Requirements

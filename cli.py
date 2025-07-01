@@ -13,7 +13,7 @@ def run():
     sentiment_scores = analyze_sentiment(tweets)
 
     print("📊 Generating report...")
-    generate_daily_report(sentiment_scores)
+    generate_daily_report(sentiment_scores, tweets)
 
     print("✅ Done. Report saved in output/daily_report.json")
 

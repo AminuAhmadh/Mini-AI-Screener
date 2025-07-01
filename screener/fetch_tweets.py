@@ -1,7 +1,7 @@
 from screener.config import WATCHLIST, TWEETS_PER_ASSET
-import requests, dotenv, os
+import requests, os, json
 
-dotenv.load_dotenv()
+# dotenv.load_dotenv()
 
 url = "https://api.twitterapi.io/twitter/tweet/advanced_search"
 headers = {"X-API-Key": os.getenv("api_key")}
@@ -18,4 +18,6 @@ def fetch_recent_tweets():
         for tweet in twts:
             tweets.append(tweet["text"])
         tweets_by_asset[asset] = tweets
+    with open("data/raw/tweets.json", "w") as f:
+        json.dump(tweets_by_asset, f, indent=2)
     return tweets_by_asset

@@ -1,7 +1,6 @@
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 nltk.download('vader_lexicon')
-from 
 
 def analyze_sentiment(tweets_by_asset):
     sia = SentimentIntensityAnalyzer()
